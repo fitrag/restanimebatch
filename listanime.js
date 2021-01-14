@@ -20,7 +20,7 @@ router.get("/anime/list/page/:id", async (req, res) => {
 
             content.find(".blog-post > .pad-blog > article").each((id, el) => {
                 let judul = $(el).find(".box-blog > .data > h2 > a").text()
-                let link = $(el).find(".box-blog > .data > h2 > a").attr("href").replace(baseUrl,"")
+                let link = $(el).find(".box-blog > .data > h2 > a").attr("href").replace(baseUrl,"").replace("/","")
                 let created_at = $(el).find(".box-blog > .data > .auth > i").text()
                 let img = $(el).find(".box-blog > .img > a").find("img").attr("src")
 
