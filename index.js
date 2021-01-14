@@ -2,6 +2,7 @@ const express = require('express')
 const cors = require('cors')
 const axios = require('axios')
 const cheerio = require('cheerio')
+let PORT = process.env.PORT || 3000
 
 const listanime = require("./listanime")
 
@@ -11,6 +12,6 @@ app.use(cors())
 
 app.use("/api", listanime)
 
-app.listen(8080, () => {
+app.listen(PORT, () => {
     console.log("Server running")
 })
